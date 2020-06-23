@@ -1,0 +1,218 @@
+$size: 70px;
+$bColor: rgba(0, 0, 0, 0.4);
+
+.list-season{
+  position: absolute;
+  z-index: 9;
+  width: 1200px;
+  height: 100px;
+  right: 0;
+  top: 300px;
+  display: flex;
+  transition-duration: 1s;
+  .item{
+    background: $bColor;
+    width: 20px;
+    height: 20px;
+    margin-right: $size;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 1s;
+    &.active{
+      background: black;
+      div{
+        opacity: 1;
+      }
+      &::after{
+        background:black;
+      }
+    }
+    div{
+      all: unset;
+      position: absolute;
+      top: -40px;
+      left: -45px;
+      background: black;
+      padding: 5px 5px;
+      width: 100px;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      opacity: 0;
+      transition-duration: 1s;
+      &::after{
+        content: '';
+        position: absolute;
+        background:black;
+        width: 10px;
+        height: 10px;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        z-index: -1;
+      }
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: $size;
+      height: 2px;
+      background: $bColor;
+      right: -$size;
+      top: 50%;
+      transform: translate(0,-50%);
+      cursor: initial;
+      transition-duration: 1s;
+    }
+    &:last-child{
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
+
+.list-episode{
+  position: absolute;
+  top: 350px;
+  width: 1220px;
+  height: 400px;
+  right: 0;
+  z-index: 8;
+  overflow: hidden;
+  .list-items{
+    white-space: nowrap;
+    margin-top: 50px;
+    transition-duration: 1s;
+    margin-left: 20px;
+    .item{
+      background: black;
+      width: 250px;
+      height: 160px;
+      margin-right: 40px;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+      vertical-align: middle;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
+      .info-episode{
+        position: absolute;
+        bottom: 20px;
+        z-index: 20;
+        left: 20px;
+
+        p{
+          &.episode-shadow{
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+
+          }
+          ion-icon{
+            color: rgb(231, 193, 24);
+            margin-right: 10px;
+          }
+        }
+        p:nth-child(2){
+          font-size: 18px;
+          font-weight: 600;
+        }
+        p:nth-child(3){
+          margin-top: 10px;
+          font-size: 12px;
+          background: #f4d648;
+          padding: 0 5px;
+          border-radius: 3px;
+          color: black;
+          font-weight: 800;
+          width: 50px;
+          span{
+            font-weight: 600;
+            padding-left: 5px;
+          }
+        }
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: inset 0px 0 30px rgba(0, 0, 0, 0.8);
+        z-index: 10;
+      }
+      &.item-active{
+        width: 300px;
+        height: 190px;
+        transition-duration: 1s;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0);
+          box-shadow: inset 0px 0 80px rgba(0, 0, 0, 0.8);
+          z-index: 10;
+        }
+        img{
+          height: 100%;
+          width: 350px;
+        }
+      }
+      img{
+        height: 100%;
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+  }
+}
+
+.nav-episode{
+  position: absolute;
+  left: 20px;
+  z-index: 20;
+  bottom: 50px;
+  display: flex;
+  .nav-btn{
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 20px;
+    cursor: pointer;
+    &.nav-btn-left ion-icon{
+      position: relative;
+      left: 48%;
+      top: 48%;
+      transform: translate(-50%,-50%);
+      font-size: 25px;
+    }
+    &.nav-btn-right ion-icon{
+      position: relative;
+      left: 52%;
+      top: 48%;
+      transform: translate(-50%,-50%);
+      font-size: 25px;
+    }
+  }
+}
+
+.episode-view{
+  position: absolute;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  bottom: 50px;
+  .separator{
+    width: 50px;
+    height: 1px;
+    background: white;
+    margin: 0 10px;
+  }
+}

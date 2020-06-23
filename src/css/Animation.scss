@@ -1,0 +1,58 @@
+@keyframes listAnimation {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes listAnimationMove {
+  from {margin-top: -20px;}
+  to {margin-top: 0;}
+}
+
+@keyframes animSeasonOut {
+  from {left: 0px; }
+  to {left: -300px;}
+}
+
+@keyframes animSeasonIn {
+  from {left: -300px; overflow-y: hidden;}
+  to {left: 0px; overflow-y: hidden;}
+}
+
+@keyframes blackOverlay {
+  0% { opacity: 1; }
+  20% { opacity: 1; }
+  70% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes smokeEffect {
+
+  0% { opacity: 0; }
+  5% { opacity: 0; }
+  20% { opacity: 0.3; }
+  70% { opacity: 0.3; }
+  95% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes smokeEffect2 {
+  0% { opacity: 0; }
+  5% { opacity: 0; }
+  20% { opacity: 0.3; }
+  70% { opacity: 0.3; }
+  95% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes skull {
+  0% { opacity: 1; }
+  30% { opacity: 1; }
+  95% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes watchList {
+  0% { opacity: 1; }
+  30% { opacity: 1; }
+  100% { opacity: 0; font-size: 0px; }
+}
