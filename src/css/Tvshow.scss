@@ -1,6 +1,8 @@
 $size: 70px;
 $bColor: rgba(0, 0, 0, 0.4);
-
+.movie-bg-content{
+  overflow: hidden;
+}
 .list-season{
   position: absolute;
   z-index: 9;

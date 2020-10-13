@@ -50,7 +50,7 @@ const Home = (props) => {
   const promoteContent = {
     img: process.env.PUBLIC_URL + '/img/promote/formula.webp',
     logo: process.env.PUBLIC_URL + '/img/promote/formula-logo.webp',
-    video: process.env.PUBLIC_URL + '/video/promote/formula.mp4',
+    video: process.env.PUBLIC_URL + '/video/promote/formula.webp',
 
   }
 
@@ -58,10 +58,7 @@ const Home = (props) => {
 
   return ( <>
     <SpecialContent></SpecialContent>
-    <PromoteContent message="Regardez la saison 2 maintenant" synopsis="Pour gagner la plus prestigieuse course automobile, ils misent tout sur la confiance, car la peur peut leur coûter cher." item={promoteContent}></PromoteContent>
-    <div className="container">
-      <ContinueWatching></ContinueWatching>
-    </div>
+    
     <ListSliderMovies  title="Movie for you" items={movieForYou} row="0"></ListSliderMovies>
     <ListSliderMovies  title="Best Action Movies" items={actionMovies}row="1"></ListSliderMovies>
     <ListSliderTvshows title="Tv Show For You" items={tvForYou} row="2"></ListSliderTvshows>

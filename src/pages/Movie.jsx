@@ -160,7 +160,7 @@ const Movie = (props) => {
       <div className="btn-similar-items" onClick={handleSimilar} >
         <ion-icon name="menu-outline"></ion-icon>
       </div>
-      <ListSliderMovies  title="Similar Movies" items={similarMovies} row="0"></ListSliderMovies>
+      <ListSliderMovies  title="Similar Content" items={similarMovies} row="0"></ListSliderMovies>
     </div>
     <div className="movie-bg-content">
       

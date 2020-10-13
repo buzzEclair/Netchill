@@ -36,9 +36,7 @@ const Navbar = (props) => {
         <nav className="nav-desktop">
           <div className="nav-left">
             <NavLink to="/" ><img className="logo" src={process.env.PUBLIC_URL + '/img/netchill.png'} alt="netflix-font" border="0" /></NavLink>
-            <NavLink to="/movies" >Movies</NavLink>
-            <NavLink to="/tvshows" >tv show</NavLink>
-            <NavLink to="/kids" >kids</NavLink>
+
           </div>
           <div className="nav-right">
             <SearchInput></SearchInput>
